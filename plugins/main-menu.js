@@ -4,54 +4,54 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'main': 'INFO 🌸',
-  'buscador': 'BUSQUEDAS 🌸',
-  'fun': 'JUEGOS 🌸',
-  'serbot': 'SUB BOTS 🌸',
-  'rpg': 'RPG 🌸',
-  'rg': 'REGISTRO 🌸',
-  'xp': 'EXP 🌸',
-  'sticker': 'STICKERS 🌸',
-  'anime': 'ANIMES 🌸',
-  'database': 'DATABASE 🌸',
-  'fix': 'FIXMSGESPERA 🌸',
-  'grupo': 'GRUPOS 🌸',
-  'nable': 'ON / OFF 🌸', 
-  'descargas': 'DESCARGAS 🌸',
-  'tools': 'HERRAMIENTAS 🌸',
-  'info': 'INFORMACIÓN 🌸',
-  'owner': 'CREADOR 🌸', 
-  'audio': 'AUDIOS 🌸', 
-  'ai': 'AI 🌸',
-  'transformador': 'CONVERTIDORES 🌸',
+  'main': 'INFO 🌟',
+  'buscador': 'BUSQUEDAS 🌟',
+  'fun': 'JUEGOS 🌟',
+  'serbot': 'SUB BOTS 🌟',
+  'rpg': 'RPG 🌟',
+  'rg': 'REGISTRO 🌟',
+  'xp': 'EXP 🌟',
+  'sticker': 'STICKERS 🌟',
+  'anime': 'ANIMES 🌟',
+  'database': 'DATABASE 🌟',
+  'fix': 'FIXMSGESPERA 🌟',
+  'grupo': 'GRUPOS 🌟',
+  'nable': 'ON / OFF 🌟', 
+  'descargas': 'DESCARGAS 🌟',
+  'tools': 'HERRAMIENTAS 🌟',
+  'info': 'INFORMACIÓN 🌟',
+  'owner': 'CREADOR 🌟', 
+  'audio': 'AUDIOS 🌟', 
+  'ai': 'AI 🌟',
+  'transformador': 'CONVERTIDORES 🌟',
 }
 
 const defaultMenu = {
   before: `*─ׄ─ׅ─⭒─ׄ─ׄ─⭒─ׅ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ─*
 
-“ Hola *%name* soy *Ian* “
+“ Hola *%name* soy *Sisked* “
 
 ┌───⊷ INFO - BOT
-┊  ✿︎ Cliente: %name
-┊  ✿︎ Exp: %exp
-┊  ✿︎ Nivel: %level
+┊  ☆ Cliente: %name
+┊  ☆ Exp: %exp
+┊  ☆ Nivel: %level
 └─────────────
 %readmore
 ┌───⊷ INFO - USER
-┊  ✿︎ Bot: Ian Bot - MD 
-┊  ✿︎ Modo Público
-┊  ✿︎ Baileys: Multi Device
-┊  ✿︎ Tiempo Activo: %muptime
-┊  ✿︎ Usuarios: %totalreg 
+┊  ☆ Bot: Sisked Bot  
+┊  ☆ Modo Público
+┊  ☆ Baileys: Multi Device
+┊  ☆ Tiempo Activo: %muptime
+┊  ☆ Usuarios: %totalreg 
 └─────────────
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
 
 \t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
-    header: '*┏━✿︎「 %category 」*',
-  body: '*┃›* %cmd',
-  footer: '*┗━✿︎*\n',
+    header: '*┏━☆「 %category 」*',
+  body: '*┃☆›* %cmd',
+  footer: '*┗━☆*\n',
   after: `> ${dev}`,
 }
 
@@ -154,8 +154,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
 let urls = [
-"https://qu.ax/fPX.mp4",
-"https://qu.ax/RYfe.mp4",
+"https://telegra.ph/file/c22cf7e81a571d952980b.jpg",
+"https://telegra.ph/file/e4cae86be4d97aabcd77c.jpg",
 ];
 let gifUrl = urls[Math.floor(Math.random() * urls.length)];
 await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m});
