@@ -6,17 +6,17 @@ const handler = async (m, {conn, participants, groupMetadata}) => {
   const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n');
   const owner = groupMetadata.owner || groupAdmins.find((p) => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net';
   const text = `💥 *INFO GRUPO*
-☁ *ID:*
+⭐ *ID:*
 → ${groupMetadata.id}
-🍁 *Nombre:*
+⭐ *Nombre:*
 → ${groupMetadata.subject}
-🌸 *Descripción:*
+⭐ *Descripción:*
 → ${groupMetadata.desc?.toString() || 'Sin Descripción'}
-💫 *Miembros:*
+⭐ *Miembros:*
 → ${participants.length} Participantes
-👑 *Creador del Grupo:*
+⭐ *Creador del Grupo:*
 → @${owner.split('@')[0]}
-🍄 *Administradores:*
+⭐ *Administradores:*
 ${listAdmin}
 
 💭 *CONFIGURACIÓN*
