@@ -22,13 +22,13 @@ return conn.reply(m.chat, `「💭」Solo puedes usar este comando en el bot pri
 }
 async function serbot() {
 let authFolderB = crypto.randomBytes(10).toString('hex').slice(0, 8);
-if (!fs.existsSync("./IanJadiBot/" + authFolderB)) {
+if (!fs.existsSync("./SiskedJadiBot/" + authFolderB)) {
 fs.mkdirSync("./IanJadiBot/" + authFolderB, { recursive: true });
 }
 if (args[0]) {
-fs.writeFileSync(`IanBot/creds.json`, Buffer.from(args[0], 'base64').toString('utf-8'))
+fs.writeFileSync(`siskedBot/creds.json`, Buffer.from(args[0], 'base64').toString('utf-8'))
 }
-const { state, saveState, saveCreds } = await useMultiFileAuthState(`./IanBot/${authFolderB}`);
+const { state, saveState, saveCreds } = await useMultiFileAuthState(`./SiskedBot/${authFolderB}`);
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache();
 const { version } = await fetchLatestBaileysVersion();
@@ -67,7 +67,7 @@ process.exit(0);
 setTimeout(async () => {
 let codeBot = await conn.requestPairingCode(cleanedNumber);
 codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
-let txt = '🌸 S E R B O T - S U B B O T 🌸\n\n*Usa este Código para convertirte en un Sub Bot*\n\n🌸 Pasos:\n\n`🌸` : Haga click en los 3 puntos\n\n`🌸` : Toque dispositivos vinculados\n\n`🌸` : Selecciona Vincular con el número de teléfono\n\n`🌸` : Escriba el Codigo\n\n> *Nota:* Este Código solo funciona en el número que lo solicito.';
+let txt = '⭐ S E R B O T - S U B B O T ⭐\n\n*Usa este Código para convertirte en un Sub Bot*\n\n⭐ Pasos:\n\n`⭐` : Haga click en los 3 puntos\n\n`⭐` : Toque dispositivos vinculados\n\n`⭐` : Selecciona Vincular con el número de teléfono\n\n`⭐` : Escriba el Codigo\n\n> *Nota:* Este Código solo funciona en el número que lo solicito.';
 await parent.reply(m.chat, txt, m, rcanal);
 await parent.reply(m.chat, codeBot, m, rcanal);
 rl.close();
@@ -84,16 +84,16 @@ let i = global.conns.indexOf(conn);
 if (i < 0) return console.log(await creloadHandler(true).catch(console.error));
 delete global.conns[i];
 global.conns.splice(i, 1);
-if (code !== DisconnectReason.connectionClosed) { parent.sendMessage(m.chat, { text: "🚩 Conexión perdida con el servidor." }, { quoted: m });
+if (code !== DisconnectReason.connectionClosed) { parent.sendMessage(m.chat, { text: "🌟 Conexión perdida con el servidor." }, { quoted: m });
 }}
 if (global.db.data == null) loadDatabase();
 if (connection == 'open') {
 conn.isInit = true;
 global.conns.push(conn);
-await parent.reply(m.chat, args[0] ? '🌺 Conectado con éxito al WhatsApp.' : '🚩 Vinculaste un Sub-Bot con éxito.', m, rcanal);
+await parent.reply(m.chat, args[0] ? '⭐ Conectado con éxito al WhatsApp.' : '🌟 Vinculaste un Sub-Bot con éxito.', m, rcanal);
 await sleep(5000);
 if (args[0]) return;
-await parentw.reply(conn.user.jid, `🚩 *Para volver a vincular un sub Bot use su token`, m, rcanal)
+await parentw.reply(conn.user.jid, `🌟 *Para volver a vincular un sub Bot use su token`, m, rcanal)
 }}
 setInterval(async () => {
 if (!conn.user) {
