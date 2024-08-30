@@ -4,41 +4,43 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'main': 'INFO 🌟',
-  'buscador': 'BUSQUEDAS 🌟',
-  'fun': 'JUEGOS 🌟',
-  'serbot': 'SUB BOTS 🌟',
-  'rpg': 'RPG 🌟',
-  'rg': 'REGISTRO 🌟',
-  'xp': 'EXP 🌟',
-  'sticker': 'STICKERS 🌟',
-  'anime': 'ANIMES 🌟',
-  'database': 'DATABASE 🌟',
-  'fix': 'FIXMSGESPERA 🌟',
-  'grupo': 'GRUPOS 🌟',
-  'nable': 'ON / OFF 🌟', 
-  'descargas': 'DESCARGAS 🌟',
-  'tools': 'HERRAMIENTAS 🌟',
-  'info': 'INFORMACIÓN 🌟',
-  'owner': 'CREADOR 🌟', 
-  'audio': 'AUDIOS 🌟', 
-  'ai': 'AI 🌟',
-  'transformador': 'CONVERTIDORES 🌟',
+  'main': 'INFO ⭐',
+  'buscador': 'BUSQUEDAS ⭐',
+  'fun': 'JUEGOS ⭐',
+  'serbot': 'SUB BOTS ⭐',
+  'rpg': 'RPG ⭐',
+  'rg': 'REGISTRO ⭐',
+  'xp': 'EXP ⭐',
+  'sticker': 'STICKERS ⭐',
+  'anime': 'ANIMES ⭐',
+  'database': 'DATABASE ⭐',
+  'fix': 'FIXMSGESPERA ⭐',
+  'grupo': 'GRUPOS ⭐',
+  'nable': 'ON / OFF ⭐', 
+  'descargas': 'DESCARGAS ⭐',
+  'tools': 'HERRAMIENTAS ⭐',
+  'info': 'INFORMACIÓN ⭐',
+  'owner': 'CREADOR ⭐', 
+  'audio': 'AUDIOS ⭐', 
+  'ai': 'AI ⭐',
+  'transformador': 'CONVERTIDORES ⭐',
 }
 
 const defaultMenu = {
   before: `*─ׄ─ׅ─⭒─ׄ─ׄ─⭒─ׅ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ─*
 
-“ Hola *%name* soy *Sisked* “
+“ Hola *%name* soy *Sisked*, %greeting ”
 
 ┌───⊷ INFO - BOT
 ┊  ☆ Cliente: %name
-┊  ☆ Exp: %exp
+┊  ☆  Exp: %exp
+┊  ☆ Estrellas: %estrellas
 ┊  ☆ Nivel: %level
+┊  ☆ Rango: %role
 └─────────────
 %readmore
 ┌───⊷ INFO - USER
-┊  ☆ Bot: Sisked Bot  
+┊  ☆ Bot: Sisked Bot - MD 
 ┊  ☆ Modo Público
 ┊  ☆ Baileys: Multi Device
 ┊  ☆ Tiempo Activo: %muptime
@@ -50,15 +52,14 @@ const defaultMenu = {
 \t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
     header: '*┏━☆「 %category 」*',
-  body: '*┃☆›* %cmd',
+  body: '*┃⭐›* %cmd',
   footer: '*┗━☆*\n',
   after: `> ${dev}`,
 }
-
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
-    let { exp, limit, level } = global.db.data.users[m.sender]
+    let { exp, estrellas, level, role } = global.db.data.users[m.sender]
     let { min, xp, max } = xpRange(level, global.multiplier)
     let name = await conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
@@ -98,7 +99,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
         help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
         tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
         prefix: 'customPrefix' in plugin,
-        limit: plugin.limit,
+        estrellas: plugin.estrellas,
         premium: plugin.premium,
         enabled: !plugin.disabled,
       }
@@ -112,7 +113,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     let header = conn.menu.header || defaultMenu.header
     let body = conn.menu.body || defaultMenu.body
     let footer = conn.menu.footer || defaultMenu.footer
-    let after = conn.menu.after || (conn.user.jid == global.conn.user.jid ? '' : ``) + defaultMenu.after
+    let after = conn.menu.after || (conn.user.jid == conn.user.jid ? '' : `Powered by https://wa.me/${conn.user.jid.split`@`[0]}`) + defaultMenu.after
     let _text = [
       before,
       ...Object.keys(tags).map(tag => {
@@ -120,8 +121,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
           ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
             return menu.help.map(help => {
               return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
-                .replace(/%islimit/g, menu.limit ? '' : '')
-                .replace(/%isPremium/g, menu.premium ? '' : '')
+                .replace(/%isdiamond/g, menu.diamond ? '(ⓓ)' : '')
+                .replace(/%isPremium/g, menu.premium ? '(Ⓟ)' : '')
                 .trim()
             }).join('\n')
           }),
@@ -131,46 +132,39 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       after
     ].join('\n')
     let text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
-    let replace = {
-      '%': '%',
-      p: _p, uptime, muptime,
-      taguser: '@' + m.sender.split("@s.whatsapp.net")[0],
-      wasp: '@0',
-      me: conn.getName(conn.user.jid),
-      npmname: _package.name,
-      version: _package.version,
-      npmdesc: _package.description,
-      npmmain: _package.main,
-      author: _package.author.name,
-      license: _package.license,
-      exp: exp - min,
-      maxexp: xp,
-      totalexp: exp,
-      xp4levelup: max - exp,
-      github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
-      level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg,
-      readmore: readMore
-    }
-    text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    
-let urls = [
-"https://telegra.ph/file/c22cf7e81a571d952980b.jpg",
-"https://telegra.ph/file/e4cae86be4d97aabcd77c.jpg",
-];
-let gifUrl = urls[Math.floor(Math.random() * urls.length)];
-await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m});
+let replace = {
+'%': '%',
+p: _p, uptime, muptime,
+me: conn.getName(conn.user.jid),
+taguser: '@' + m.sender.split("@s.whatsapp.net")[0],
+npmname: _package.name,
+npmdesc: _package.description,
+version: _package.version,
+exp: exp - min,
+maxexp: xp,
+botofc: (conn.user.jid == global.conn.user.jid ? '🚩 𝙴𝚂𝚃𝙴 𝙴𝚂 𝙴𝙻 𝙱𝙾𝚃 𝙾𝙵𝙲' : `🚩 𝚂𝚄𝙱-𝙱𝙾𝚃 𝙳𝙴: Wa.me/${global.conn.user.jid.split`@`[0]}`), 
+totalexp: exp,
+xp4levelup: max - exp,
+github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
+greeting, level, estrellas, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
+readmore: readMore
+}
+text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
+await m.react('🌟') 
+
+conn.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": packname, body: dev, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen1, "mediaUrl": global.channel, "sourceUrl": global.channel}}}, {quoted: m})
 
   } catch (e) {
-    conn.reply(m.chat, 'Lo sentimos, el menú tiene un error.', m)
+    conn.reply(m.chat, '❌️ Lo sentimos, el menú tiene un error', m, rcanal, )
     throw e
   }
 }
-
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = ['menu', 'help','allmenu', 'menú'] 
-handler.register = true 
+handler.command = ['menu', 'help', 'menuall', 'allmenú', 'allmenu', 'menucompleto'] 
+handler.register = true
+
 export default handler
 
 const more = String.fromCharCode(8206)
