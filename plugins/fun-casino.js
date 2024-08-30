@@ -21,18 +21,18 @@ return
 cooldowns[m.sender] = Date.now()
 count = count ? /all/i.test(count) ? Math.floor(global.db.data.users[m.sender].limit / buatall) : parseInt(count) : args[0] ? parseInt(args[0]) : 1
 count = Math.max(1, count)
-if (args.length < 1) return conn.reply(m.chat, '🚩 Ingresa la cantidad de ' + `💵 Dolares*` + ' que deseas aportar contra' + ` *SiskedBot-MD*` + `\n\n` + '`Ejemplo:`\n' + `> *${usedPrefix + command}* 100`, m, rcanal)
+if (args.length < 1) return conn.reply(m.chat, '🚩 Ingresa la cantidad de ' + `⭐Estrellas*` + ' que deseas aportar contra' + ` *SiskedBot-MD*` + `\n\n` + '`Ejemplo:`\n' + `> *${usedPrefix + command}* 100`, m, rcanal)
 if (user.estrellas >= count * 1) {
 user.estrellas -= count * 1
 if (Aku > Kamu) {
-conn.reply(m.chat, '`🌟 Veamos que numeros tienen!`\n\n'+ `➠ *IanBot* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *PERDISTE* ${formatNumber(count)} 💵 Dolares.`.trim(), m, rcanal)
+conn.reply(m.chat, '`🌟 Veamos que numeros tienen!`\n\n'+ `➠ *Sisked* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *PERDISTE* ${formatNumber(count)} 💵 Dolares.`.trim(), m, rcanal)
 } else if (Aku < Kamu) {
 user.estrellas += count * 2
-conn.reply(m.chat, '`🌟 Veamos que numeros tienen!`\n\n'+ `➠ *IanBot* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *GANASTE* ${formatNumber(count * 2)} 💵 Dolares.`.trim(), m, rcanal)
+conn.reply(m.chat, '`🌟 Veamos que numeros tienen!`\n\n'+ `➠ *Sisked* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *GANASTE* ${formatNumber(count * 2)} 💵 Dolares.`.trim(), m, rcanal)
 } else {
 user.estrellas += count * 1
-conn.reply(m.chat, '`🌟 Veamos que numeros tienen!`\n\n'+ `➠ *ianBot* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username} obtienes ${formatNumber(count * 1)} 💵 Dolares.`.trim(), m, rcanal)}
-} else conn.reply(m.chat, `No tienes *${formatNumber(count)} 💵 Dolares* para apostar!`.trim(), m, rcanal)}
+conn.reply(m.chat, '`🌟 Veamos que numeros tienen!`\n\n'+ `➠ *Sisked* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username} obtienes ${formatNumber(count * 1)} 💵 Dolares.`.trim(), m, rcanal)}
+} else conn.reply(m.chat, `No tienes *${formatNumber(count)} ⭐ Estrellas* para apostar!`.trim(), m, rcanal)}
 
 handler.help = ['apostar *<cantidad>*']
 handler.tags = ['fun']
