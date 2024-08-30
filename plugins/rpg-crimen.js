@@ -9,7 +9,7 @@ let senderName = conn.getName(senderId)
 let tiempo = 5 * 60
 if (cooldowns[m.sender] && Date.now() - cooldowns[m.sender] < tiempo * 1000) {
 let tiempo2 = segundosAHMS(Math.ceil((cooldowns[m.sender] + tiempo * 1000 - Date.now()) / 1000))
-m.reply(`🌸 Ya has cometido un Crimen recientemente, espera ⏱️ *${tiempo2}* para cometer tu próximo Crimen y evitar ser atrapado.`)
+m.reply(`⭐ Ya has cometido un Crimen recientemente, espera ⏱️ *${tiempo2}* para cometer tu próximo Crimen y evitar ser atrapado.`)
 return
 }
 cooldowns[m.sender] = Date.now()
@@ -27,7 +27,7 @@ case 0:
 users[senderId].estrellas += amountTaken
 users[randomUserId].estrellas -= amountTaken
 conn.sendMessage(m.chat, {
-text: `☁ ¡Lograste cometer tu crimen con exito!, acabas de robar *${amountTaken} 💵 Dolares* a @${randomUserId.split("@")[0]}\n\nSe suman *+${amountTaken} 💵 Dolares* a ${senderName}.`,
+text: `☁ ¡Lograste cometer tu crimen con exito!, acabas de robar *${amountTaken} ⭐ Estrellas* a @${randomUserId.split("@")[0]}\n\nSe suman *+${amountTaken} ⭐ Estrellas* a ${senderName}.`,
 contextInfo: { 
 mentionedJid: [randomUserId],
 }}, { quoted: m })
@@ -35,14 +35,14 @@ break
 case 1:
 let amountSubtracted = Math.min(Math.floor(Math.random() * (senderEstrellas - minAmount + 1)) + minAmount, maxAmount)
 users[senderId].estrellas -= amountSubtracted
-conn.reply(m.chat, `☁ No fuiste cuidadoso y te atraparon mientras cometias tu crime, se restaron *-${amountSubtracted} 💵 Dolares* a ${senderName}.`, m, rcanal)
+conn.reply(m.chat, `☁ No fuiste cuidadoso y te atraparon mientras cometias tu crime, se restaron *-${amountSubtracted} ⭐ Estrellas* a ${senderName}.`, m, rcanal)
 break
 case 2:
 let smallAmountTaken = Math.min(Math.floor(Math.random() * (randomUserEstrellas / 2 - minAmount + 1)) + minAmount, maxAmount)
 users[senderId].estrellas += smallAmountTaken
 users[randomUserId].estrellas -= smallAmountTaken
 conn.sendMessage(m.chat, {
-text: `☁ Lograste cometer tu crimen con exito, pero te descubrieron y solo lograste tomar *${smallAmountTaken} 💵 Dolares* de @${randomUserId.split("@")[0]}\n\nSe suman *+${smallAmountTaken} 💵 Dolares* a ${senderName}.`,
+text: `☁ Lograste cometer tu crimen con exito, pero te descubrieron y solo lograste tomar *${smallAmountTaken} ⭐ Estrellas* de @${randomUserId.split("@")[0]}\n\nSe suman *+${smallAmountTaken} ⭐ Estrellas* a ${senderName}.`,
 contextInfo: { 
 mentionedJid: [randomUserId],
 }}, { quoted: m })
