@@ -55,33 +55,33 @@ setTimeout(resolve, 1000)
 }
 let timestamp = speed()
 let latensi = speed() - timestamp
-let Ian = `╭─⬣「 *Info De IanBot* 」⬣\n`
-Ian += `│ 👑 *Creador* : @${owner[0][0].split('@s.whatsapp.net')[0]}\n`
-Ian += `│ 🍭 *Prefijo* : [  ${usedPrefix}  ]\n`
-Ian += `│ 📦 *Total Plugins* : ${totalf}\n`
-Ian += `│ 💫 *Plataforma* : ${platform()}\n`
-Ian += `│ 🧿 *Servidor* : ${hostname()}\n`
-Ian += `│ 🚀 *RAM* : ${format(totalmem() - freemem())} / ${format(totalmem())}\n`
-Ian += `│ 🌟 *FreeRAM* : ${format(freemem())}\n`
-Ian += `│ ✨️ *Speed* : ${latensi.toFixed(4)} ms\n`
-Ian += `│ 🕗 *Uptime* : ${uptime}\n`
-Ian += `│ 🌸 *Modo* : ${bot.public ? 'Privado' : 'Publico'}\n`
-Ian += `│ 🚩 *Comandos Ejecutados* : ${toNum(totalStats)} ( *${totalStats}* )\n`
-Ian += `│ 🌺 *Grupos Registrados* : ${toNum(totalchats)} ( *${totalchats}* )\n`
-Ian += `│ 🍧 *Registrados* : ${toNum(totalreg)} ( *${totalreg}* ) Usuarios\n`
-Ian += `╰─⬣\n\n`
-Ian += `╭─⬣「 *Chats De IanBot* 」⬣\n`
-Ian += `│ 🧃 *${groupsIn.length}* Chats en Grupos\n`
-Ian += `│ 🌸 *${groupsIn.length}* Grupos Unidos\n`
-Ian += `│ 🍁 *${groupsIn.length - groupsIn.length}* Grupos Salidos\n`
-Ian += `│ 💬 *${chats.length - groupsIn.length}* Chats Privados\n`
-Ian += `│ 💭 *${chats.length}* Chats Totales\n`
-Ian += `╰─⬣\n\n`
-Ian += `╭─⬣「 *NodeJS Uso de memoria* 」⬣\n`
-Ian += `${'```' + Object.keys(used).map((key, _, arr) => `│ ${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}\n`
-Ian += `╰─⬣`
+let Sisked = `╭─⬣「 *Info De Sisked* 」⬣\n`
+Sisked += `│ ⭐ *Creador* : @${owner[0][0].split('@s.whatsapp.net')[0]}\n`
+Sisked += `│ ⭐ *Prefijo* : [  ${usedPrefix}  ]\n`
+Sisked += `│ ⭐ *Total Plugins* : ${totalf}\n`
+Sisked += `│ ⭐ *Plataforma* : ${platform()}\n`
+Sisked += `│ ⭐ *Servidor* : ${hostname()}\n`
+Sisked += `│ ⭐ *RAM* : ${format(totalmem() - freemem())} / ${format(totalmem())}\n`
+Sisked += `│ ⭐ *FreeRAM* : ${format(freemem())}\n`
+Sisked += `│ ⭐ *Speed* : ${latensi.toFixed(4)} ms\n`
+Sisked += `│ ⭐ *Uptime* : ${uptime}\n`
+Sisked += `│ ⭐ *Modo* : ${bot.public ? 'Privado' : 'Publico'}\n`
+Sisked += `│ ⭐ *Comandos Ejecutados* : ${toNum(totalStats)} ( *${totalStats}* )\n`
+Sisked += `│ ⭐ *Grupos Registrados* : ${toNum(totalchats)} ( *${totalchats}* )\n`
+Sisked += `│ ⭐ *Registrados* : ${toNum(totalreg)} ( *${totalreg}* ) Usuarios\n`
+Sisked += `╰─⬣\n\n`
+Sisked += `╭─⬣「 *Chats De Sisked* 」⬣\n`
+Sisked += `│ ⭐ *${groupsIn.length}* Chats en Grupos\n`
+Sisked += `│ ⭐ *${groupsIn.length}* Grupos Unidos\n`
+Sisked += `│ ⭐ *${groupsIn.length - groupsIn.length}* Grupos Salidos\n`
+Sisked += `│ ⭐ *${chats.length - groupsIn.length}* Chats Privados\n`
+Sisked += `│ ⭐ *${chats.length}* Chats Totales\n`
+Sisked += `╰─⬣\n\n`
+Sisked += `╭─⬣「 *NodeJS Uso de memoria* 」⬣\n`
+Sisked += `${'```' + Object.keys(used).map((key, _, arr) => `│ ${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}\n`
+Sisked += `╰─⬣`
 
-await conn.reply(m.chat, Ian, fkontak, { contextInfo: { mentionedJid: [owner[0][0] + '@s.whatsapp.net'], externalAdReply: { mediaUrl: false, mediaType: 1, description: false, title: '↷✦╎Info - Bot╎🚩˖ ⸙',body: packname, previewType: 0, thumbnail: icons, sourceUrl: redes}}})
+await conn.reply(m.chat, Ian, fkontak, { contextInfo: { mentionedJid: [owner[0][0] + '@s.whatsapp.net'], externalAdReply: { mediaUrl: false, mediaType: 1, description: false, title: '↷✦╎Info - Bot╎⭐˖ ⸙',body: packname, previewType: 0, thumbnail: icons, sourceUrl: redes}}})
 // await conn.sendFile(m.chat, imagen1, 'Menu.jpg', Menu, fkontak, null, rcanal)
 }
 handler.help = ['infobot']
