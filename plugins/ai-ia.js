@@ -5,7 +5,7 @@ import fetch from 'node-fetch'
 let handler = async (m, { conn, usedPrefix, command, text }) => {
 const isQuotedImage = m.quoted && (m.quoted.msg || m.quoted).mimetype && (m.quoted.msg || m.quoted).mimetype.startsWith('image/')
 const username = `${conn.getName(m.sender)}`
-const basePrompt = `Tu nombre es Ian Bot y parece haber sido creado por ianalejandrook15x. Tú usas el idioma Español. Llamarás a las personas por su nombre ${username}, te gusta ser divertido, y te encanta aprender. Lo más importante es que debes ser amigable con la persona con la que estás hablando. ${username}`
+const basePrompt = `Tu nombre es Sisked Bot y parece haber sido creado por Anuar. Tú usas el idioma Español. Llamarás a las personas por su nombre ${username}, te gusta ser divertido, y te encanta aprender. Lo más importante es que debes ser amigable con la persona con la que estás hablando. ${username}`
 if (isQuotedImage) {
 const q = m.quoted
 const img = await q.download?.()
@@ -23,7 +23,7 @@ await conn.reply(m.chat, description, m, fake)
 console.error('🍁 Error al analizar la imagen:', error)
 await conn.reply(m.chat, '🍁 Error al analizar la imagen.', m, fake)}
 } else {
-if (!text) { return conn.reply(m.chat, `🌸 *Ingrese su petición*\n☁ *Ejemplo de uso:* ${usedPrefix + command} Como hacer un barco de papel`, m, rcanal)}
+if (!text) { return conn.reply(m.chat, `🌟 *Ingrese su petición*\n☁ *Ejemplo de uso:* ${usedPrefix + command} Como hacer un barco de papel`, m, rcanal)}
 await m.react('💬')
 try {
 const query = text
@@ -78,7 +78,7 @@ const configuration = new Configuration({organization: global.openai_org_id, api
 const openaiii = new OpenAIApi(configuration);
 const handler = async (m, {conn, text, usedPrefix, command}) => {
 if (usedPrefix == 'a' || usedPrefix == 'A') return;
-if (!text) return conn.reply(m.chat, `🌸 *Ingrese su petición*\n☁ *Ejemplo de uso:* ${usedPrefix + command} Como hacer un barco de papel`, m, rcanal)  
+if (!text) return conn.reply(m.chat, `🌟 *Ingrese su petición*\n☁ *Ejemplo de uso:* ${usedPrefix + command} Como hacer un barco de papel`, m, rcanal)  
 try {
 await m.react(rwait)
 conn.sendPresenceUpdate('composing', m.chat);
