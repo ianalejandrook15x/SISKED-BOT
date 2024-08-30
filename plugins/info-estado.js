@@ -15,14 +15,14 @@ let muptime = clockString(_muptime)
 const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
 const groupsIn = chats.filter(([id]) => id.endsWith('@g.us')) 
 const used = process.memoryUsage()
-let Ian = `╭─⬣「 *Estado De IanBot* 」⬣\n`
-Ian += `│ 🚩 *Creador ∙* Ianalejandrook15x\n`
-Ian += `│ 📚 *Grupos Unidos ∙* ${groupsIn.length}\n`
-Ian += `│ 👤 *Chats Privados ∙* ${chats.length - groupsIn.length}\n`
-Ian += `│ 💬 *Total De Chats ∙* ${chats.length}\n`
-Ian += `│ 🌸 *Usuarios Registrados ∙* ${totalreg}\n`
-Ian += `│ 🍭 *Grupos Registrados ∙* ${totalchats}\n`
-Ian += `│ 🕜 *Actividad ∙* ${muptime}\n`
+let Ian = `╭─⬣「 *Estado De Sisked* 」⬣\n`
+Ian += `│ 🌟 *Creador ∙* Sisked-Bot\n`
+Ian += `│ 🌟 *Grupos Unidos ∙* ${groupsIn.length}\n`
+Ian += `│ 🌟 *Chats Privados ∙* ${chats.length - groupsIn.length}\n`
+Ian += `│ 🌟 *Total De Chats ∙* ${chats.length}\n`
+Ian += `│ 🌟 *Usuarios Registrados ∙* ${totalreg}\n`
+Ian += `│ 🌟 *Grupos Registrados ∙* ${totalchats}\n`
+Ian += `│ 🌟 *Actividad ∙* ${muptime}\n`
 Ian += `╰─⬣`
 await conn.sendFile(m.chat, pp, 'nino.jpg', ian, fkontak, null, rcanal)
 }
