@@ -1,7 +1,7 @@
 
 var handler  = async (m, { conn }) => {
 
-let texto = `🚩 *Instalación de IanBot*
+let texto = `🚩 *Instalación de Sisked*
 
 ⬡ Dudas: ${creador}
 ⬡ Tutoríal: *¡Pronto!*
@@ -14,7 +14,7 @@ apt-get update -y && apt-get upgrade -y
 
 pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 
-git clone https://github.com/ianalejandrook15x/ian-bot-MD && cd ian-bot-MD && yarn install && npm install 
+git clone https://github.com/ianalejandrook15x/SISKED-BOT && cd SISKED-BOT && yarn install && npm install 
 
 ls
 
@@ -35,7 +35,7 @@ m.reply('apt-get update -y && apt-get upgrade -y')
 await delay(1000 * 1)
 m.reply('pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn')
 await delay(1000 * 1)
-m.reply('git clone https://github.com/ianalejandrook15x/ian-bot-MD && cd ian-bot-MD && yarn install && npm install ')
+m.reply('git clone https://github.com/ianalejandrook15x/SISKED-BOT && cd SISKED-BOT && yarn install && npm install ')
 await delay(1000 * 1)
 m.reply('ls')
 await delay(1000 * 1)
@@ -54,7 +54,7 @@ conn.sendMessage(m.chat, {image: {url: 'https://wallpapers.com/images/hd/happy-a
 }
 handler.help = ['instalarian']
 handler.tags = ['main']
-handler.command = /^(instalarian|instalarbot)/i
+handler.command = /^(instalarsisked|instalarbot)/i
 
 export default handler
 
