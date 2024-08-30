@@ -13,7 +13,7 @@ let yaemori = `🍁 *Respeta las reglas de Sisked*\n
 🌟 𝗔𝘃𝗶𝘀𝗼: *Puedes apoyarnos dejando una estrellita 🌟 al repositorio oficial de Anuar.*
 
 ${global.md}`.trim()
-await conn.reply(m.chat, ian, m, fake)
+await conn.reply(m.chat, sisked, m, fake)
 
 }
 handler.help = ['botreglas']
