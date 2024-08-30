@@ -38,7 +38,7 @@ global.imagen3 = fs.readFileSync('./Menu3.jpg')
 global.welcome = fs.readFileSync('./media/welcome.jpg')
 global.adios = fs.readFileSync('./media/adios.jpg')
 global.catalogo = fs.readFileSync('./storage/img/catalogo1.jpg')
-global.ianurl = fs.readFileSync('./storage/img/ianurl.jpg')
+global.siskedurl = fs.readFileSync('./storage/img/siskedurl.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
