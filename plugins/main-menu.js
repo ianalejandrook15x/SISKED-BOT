@@ -41,7 +41,7 @@ const defaultMenu = {
 %readmore
 ┌───⊷ INFO - USER
 ┊  ☆ Bot: Sisked Bot - MD 
-┊  ☆ Modo Público
+┊  ☆ Modo: Público
 ┊  ☆ Baileys: Multi Device
 ┊  ☆ Tiempo Activo: %muptime
 ┊  ☆ Usuarios: %totalreg 
