@@ -9,14 +9,14 @@ let staff = `🍁 *EQUIPO DE AYUDANTES*
 • Anuar
 ⭐ *Rol:* Propietario 👑
 🌟 *Número:* ${creador}
-✨️ *GitHub:* https://github.com/Sisked-Bot
 
 🌸COLABORADORES
 
 • Ian
 ⭐ *Rol:* Desarrollador ☁
-🌟 *Número:* 543876631319
-✨️ *GitHub:* https://github.com/ianalejandrook15x
+🌟 *Número:* 584123989549
+🌟 *Número:* 543876631319 
+
 await conn.sendFile(m.chat, icons, 'nino.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
 'forwardingScore': 200,
