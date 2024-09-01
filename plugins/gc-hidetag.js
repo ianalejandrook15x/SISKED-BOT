@@ -2,7 +2,7 @@ let generateWAMessageFromContent = (await import(global.baileys)).default
 import * as fs from 'fs'
 
 var handler = async (m, { conn, text, participants, isOwner, isAdmin }) => {
-if (!m.quoted && !text) return m.reply(`${lenguajeGB['smsAvisoMG']()} *_MMMMMMM_*?`) 
+if (!m.quoted && !text) return m.reply(`𝙔 𝙀𝙇 𝙏𝙀𝙓𝙏𝙊?`) 
 try { 
 let users = participants.map(u => conn.decodeJid(u.id))
 let q = m.quoted ? m.quoted : m || m.text || m.sender
@@ -36,7 +36,7 @@ conn.sendMessage(m.chat, {sticker: mediax, mentions: users}, { quoted: m })
 await conn.sendMessage(m.chat, { text : text ? text : '' , mentions: users}, { quoted: null, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 //await conn.relayMessage(m.chat, {extendedTextMessage:{text: `${masss}\n${htextos}\n`, ...{ contextInfo: { mentionedJid: users, externalAdReply: { thumbnail: imagen1, sourceUrl: md }}}}}, {})
 }}}
-handler.command = /^(hidetag|n|noti|notificar|notify)$/i
+handler.command = /^(hidetag|notificar|notify)$/i
 handler.group = true
 handler.admin = true
 export default handler
