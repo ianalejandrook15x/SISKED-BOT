@@ -67,7 +67,7 @@ var canal = 'https://whatsapp.com/channel/0029VajkZ6blXnlwPZmbuH1u'
 let tiktok = 'https://tiktok.com/@slsked'
 let correo = 'anuarmazenett@gmail.com'
 
-global.redes = [canal, git, github, tiktok, correo].getRandom()
+global.redes = [canal, tiktok, correo].getRandom()
 
 //Imagen
 let category = "imagen"
