@@ -96,7 +96,7 @@ global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@
 
 // global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "4123989549-120363315593103255@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: `${packname}`, orderTitle: 'Bang', thumbnail: icons, sellerJid: '0@s.whatsapp.net'}}}
 
-global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363318758721861@newsletter', newsletterName: "𝑺𝑰𝑺𝑲𝑬𝑫-𝑩𝑶𝑻", serverMessageId: -1 }
+global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '12098765423@newsletter', newsletterName: "𝑺𝑰𝑺𝑲𝑬𝑫-𝑩𝑶𝑻", serverMessageId: -1 }
 }}, { quoted: m }
   
 global.icono = [ 
@@ -108,6 +108,6 @@ global.icono = [
 'https://telegra.ph/file/e4cae86be4d97aabcd77c.jpg',
 ].getRandom()
 
-global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "120363318758721861@newsletter", serverMessageId: 100, newsletterName: '𝑺𝑰𝑺𝑲𝑬𝑫-𝑩𝑶𝑻', }, externalAdReply: { showAdAttribution: true, title: packname, body: '⭐ Bot De WhatsApp!', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
+global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "12098765423@newsletter", serverMessageId: 100, newsletterName: '𝑺𝑰𝑺𝑲𝑬𝑫-𝑩𝑶𝑻', }, externalAdReply: { showAdAttribution: true, title: packname, body: '⭐ Bot De WhatsApp!', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
 export default handler
