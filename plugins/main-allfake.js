@@ -65,7 +65,6 @@ global.waitttt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻�
 //Enlaces
 var canal = 'https://whatsapp.com/channel/0029VajkZ6blXnlwPZmbuH1u'  
 var git = 'https://github.com/SISKED-BOT'
-var github = 'https://github.com/ianalejandrook15x/SISKED-BOT' 
 let tiktok = 'https://tiktok.com/@slsked'
 let correo = 'anuarmazenett@gmail.com'
 
