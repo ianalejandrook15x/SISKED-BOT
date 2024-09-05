@@ -465,13 +465,13 @@ let chat = global.db.data.chats[msg?.chat] || {}
 if (!chat?.delete) return 
 if (!msg) return 
 if (!msg?.isGroup) return 
-const antideleteMessage = `╭•┈•〘❌ 𝗔𝗡𝗧𝗜 𝗗𝗘𝗟𝗘𝗧𝗘 ❌〙•┈• ◊
-│❒ 𝗨𝗦𝗨𝗔𝗥𝗜𝗢:
+const antideleteMessage = `╭•┈•〘✖️ 𝗔𝗡𝗧𝗜 𝗗𝗘𝗟𝗘𝗧𝗘 ✖️〙•┈• ◊
+│⭐ 𝗨𝗦𝗨𝗔𝗥𝗜𝗢:
 │• @${participant.split`@`[0]}
 │
-│❒ 𝗔𝗰𝗮𝗯𝗮 𝗱𝗲 𝗲𝗹𝗶𝗺𝗶𝗻𝗮𝗿 𝘂𝗻 𝗺𝗲𝗻𝘀𝗮𝗷𝗲
+│👻 𝗔𝗰𝗮𝗯𝗮 𝗱𝗲 𝗲𝗹𝗶𝗺𝗶𝗻𝗮𝗿 𝘂𝗻 𝗺𝗲𝗻𝘀𝗮𝗷𝗲
 │𝗿𝗲𝗲𝗻𝘃𝗶𝗮𝗻𝗱𝗼... ⏱️
-╰•┈•〘❌ 𝗔𝗡𝗧𝗜 𝗗𝗘𝗟𝗘𝗧𝗘 ❌〙•┈• ◊`.trim();
+╰•┈•〘✖️ 𝗔𝗡𝗧𝗜 𝗗𝗘𝗟𝗘𝗧𝗘 ✖️〙•┈• ◊`.trim();
 await this.sendMessage(msg.chat, {text: antideleteMessage, mentions: [participant]}, {quoted: msg})
 this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
 } catch (e) {
@@ -480,15 +480,15 @@ console.error(e)
 
 global.dfail = (type, m, conn) => {
 const msg = {
-rowner: '「⭐」 *Esta función solo puede ser usada por mi creador*\n\n> Anuar', 
+rowner: '「⭐」 *Esta función solo puede ser usada por mi creador*\n\n> Sisked', 
 owner: '「⭐」 *Esta función solo puede ser usada por mi desarrollador.', 
-mods: '「⭐」 *Esta función solo puede ser usada por mis desarrolladores.*', 
+mods: '「⭐」 *Esta función solo puede ser usada por mi desarrollador.*', 
 premium: '「⭐」 *Esta función solo es para usuarios Premium.', 
 group: '「⭐」 *Esta funcion solo puede ser ejecutada en grupos.*', 
 private: '「⭐」 *Esta función solo puede ser usada en chat privado.*', 
 admin: '「⭐」 *Este comando solo puede ser usado por admins.*', 
 botAdmin: '「⭐」 *Para usar esta función debo ser admin.*', 
-unreg: '「⭐」 *No te encuentras registrado, registrese para usar esta función*\n\n*/reg nombre.edad*\n\n*Ejemplo* : */reg anuar.666*',
+unreg: '「⭐」 *No te encuentras registrado, registrese para usar esta función*\n\n*/reg nombre.edad*\n\n*Ejemplo* : */reg Sisked.19*',
 restrict: '「⭐」 *Esta característica esta desactivada.*'
 }[type];
 if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))}
