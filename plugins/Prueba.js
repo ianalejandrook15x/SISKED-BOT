@@ -4,7 +4,7 @@ if (new Date - global.db.data.users[m.sender].lastcofre < 0) throw `[❗𝐈𝐍
 
 let img = 'https://telegra.phundefined' 
 let texto = `╭──────⚔──────╮
-ㅤㅤ12 𝐕𝐄𝐑𝐒𝐔𝐒 12
+ㅤㅤ4 𝐕𝐄𝐑𝐒𝐔𝐒 4
 ╰──────⚔──────╯
 ╭──────────────╮
 │ㅤ⏱ 𝐇𝐎𝐑𝐀𝐑𝐈𝐎 
@@ -20,25 +20,10 @@ let texto = `╭──────⚔──────╮
 │⚜️ ➤ 
 │⚜️ ➤ 
 │     
-│    𝗘𝗦𝗖𝗨𝗔𝗗𝗥𝗔 2
-│
-│👑 ➤ 
-│⚜️ ➤ 
-│⚜️ ➤ 
-│⚜️ ➤ 
-│
-│    𝗘𝗦𝗖𝗨𝗔𝗗𝗥𝗔 3
-│
-│👑 ➤ 
-│⚜️ ➤ 
-│⚜️ ➤ 
-│⚜️ ➤ 
-│
 │ㅤʚ 𝐒𝐔𝐏𝐋𝐄𝐍𝐓𝐄:
 │⚜️ ➤ 
 │⚜️ ➤ 
 ╰─────────────╯`
-
 const fkontak = {
 	"key": {
     "participants":"0@s.whatsapp.net",
@@ -56,7 +41,7 @@ const fkontak = {
 await conn.sendFile(m.chat, img, 'img.jpg', texto, fkontak)
 global.db.data.users[m.sender].lastcofre = new Date * 1
 }
-handler.command = ['vs12'] 
+handler.command = ['vs4'] 
 handler.register = true
 handler.admin = true
 export default handler
