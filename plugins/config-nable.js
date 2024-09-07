@@ -4,31 +4,31 @@ let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status
 
 const miniopcion = `⭐ *_OPCIONES PARA GRUPOS_*
 
-${usedPrefix + command} welcome
-${usedPrefix + command} detect
-${usedPrefix + command} antidelete
-${usedPrefix + command} antilink
-${usedPrefix + command} antilink2
-${usedPrefix + command} autolevelup
-${usedPrefix + command} autosticker
-${usedPrefix + command} reaction
-${usedPrefix + command} antitoxic
-${usedPrefix + command} audios
-${usedPrefix + command} modoadmin
-${usedPrefix + command} antifake
+${usedPrefix + command} _welcome_
+${usedPrefix + command} _detect_
+${usedPrefix + command} _antidelete_
+${usedPrefix + command} _antilink_
+${usedPrefix + command} _antilink2_
+${usedPrefix + command} _autolevelup_
+${usedPrefix + command} _autosticker_
+${usedPrefix + command} _reaction_
+${usedPrefix + command} _antitoxic_
+${usedPrefix + command} _audios_
+${usedPrefix + command} _modoadmin_
+${usedPrefix + command} _antifake_
 
-🍄 *_OPCIONES PARA MI PROPIETARIO_*
+⭐ *_OPCIONES PARA MI PROPIETARIO_*
 
-${usedPrefix + command} public
-${usedPrefix + command} status
-${usedPrefix + command} serbot
-${usedPrefix + command} restrict
-${usedPrefix + command} autoread
-${usedPrefix + command} antillamar
-${usedPrefix + command} antispam
-${usedPrefix + command} pconly
-${usedPrefix + command} gconly
-${usedPrefix + command} antiprivado`
+${usedPrefix + command} _public_
+${usedPrefix + command} _status_
+${usedPrefix + command} _serbot_
+${usedPrefix + command} _restrict_
+${usedPrefix + command} _autoread_
+${usedPrefix + command} _antillamar_
+${usedPrefix + command} _antispam_
+${usedPrefix + command} _pconly_
+${usedPrefix + command} _gconly_
+${usedPrefix + command} _antiprivado_`
 
 const isEnable = /true|enable|(turn)?on|1/i.test(command);
 const chat = global.db.data.chats[m.chat];
