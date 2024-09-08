@@ -51,10 +51,19 @@ EJEMPLO: 8vs8 22:50 NEGRO
 if (/^.bermuda/i.test(m.text)) {
 conn.reply(m.chat, `*Mapa Eligido Bermuda 🐉*`, m, rcanal, )
 }
-  
-if (/^que$/i.test(m.text)) {
-conn.reply(m.chat, `*so*`, m, rcanal, )
+
+if (/^.alpes/i.test(m.text)) {
+conn.reply(m.chat, `*Mapa Eligido Alpes 🐉*`, m, rcanal, )
 }
+  
+if (/^.kalahari$/i.test(m.text)) {
+conn.reply(m.chat, `*Mapa Eligido Kalahari 🐉*`, m, rcanal, )
+}
+
+if (/^.nexterra$/i.test(m.text)) {
+conn.reply(m.chat, `*Mapa Eligido NexTerra 🐉*`, m, rcanal, )
+}
+  
 if (/^duda$/i.test(m.text)) {
 conn.reply(m.chat, `*Hola tienes alguna duda sobre el bot o sobre el hosting enviame mensaje al privado* ☁ Wa.me/584123989549`, m, rcanal, )
 }
