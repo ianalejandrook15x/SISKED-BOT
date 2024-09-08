@@ -10,8 +10,30 @@ conn.reply(m.chat, `🌟 ¡Hola! Soy Sisked, en que puedo ayudarte hoy?\n\n✰ U
 /*if (/^que|q$/i.test(m.text)) {
 conn.reply(m.chat, `*so*`, m, rcanal, )
 }*/
-if (/^English$/i.test(m.text)) {
-conn.reply(m.chat, `*The first one to speak is gay*`, m, rcanal, )
+if (/^free fire$/i.test(m.text)) {
+conn.reply(m.chat, `*LISTAS PARA VS DE CLANES DE FREE FIRE Y MAS
+
+SIGNIFICADOS: HH:MM (HORA:MINUTOS) 
+CP (CODIGO DE PAIS) PARA LA HORA (MX, CO, CL Y AR) 
+CR (COLOR DE ROPA)
+EJEMPLO: 4vs4 22:30 MX
+EJEMPLO: 8vs8 22:50 NEGRO
+
+4vs4
+6vs6
+scrim
+interna4
+interna6
+8vs8
+12vs12
+16vs16 
+20vs20 
+24vs24
+Cuadrilatero
+Donarsala 
+Reglasclk
+Reglaslideres 
+Reglaslideres2*`, m, rcanal, )
 }
 
 if (/^Bot de mierda/i.test(m.text)) {
