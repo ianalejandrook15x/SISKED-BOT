@@ -32,12 +32,13 @@ global.vs = '1.0.5'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.imagen1 = fs.readFileSync('./Menu.jpg')
+global.fantasyVid = ['./media/menus/Menuvid1.mp4', './media/menus/Menuvid2.mp4', './media/menus/Menuvid3.mp4']
 global.imagen2 = fs.readFileSync('./Menu2.jpg')
 global.imagen3 = fs.readFileSync('./Menu3.jpg')
-global.welcome = fs.readFileSync('./Welcome.jpg')
+global.welcome = fs.readFileSync('./media/welcome.jpg')
 global.adios = fs.readFileSync('./media/adios.jpg')
 global.catalogo = fs.readFileSync('./storage/img/catalogo1.jpg')
-global.siskedurl = fs.readFileSync('./storage/img/siskedurl.jpg')
+global.ianurl = fs.readFileSync('./storage/img/siskedurl.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
