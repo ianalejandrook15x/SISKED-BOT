@@ -55,6 +55,10 @@ conn.reply(m.chat, `*Mapa Eligido Bermuda 🐉*`, m, rcanal, )
 if (/^.alpes/i.test(m.text)) {
 conn.reply(m.chat, `*Mapa Eligido Alpes 🐉*`, m, rcanal, )
 }
+
+if (/^.purgatorio/i.test(m.text)) {
+conn.reply(m.chat, `*Mapa Eligido Purgatorio 🐉*`, m, rcanal, )
+}
   
 if (/^.kalahari$/i.test(m.text)) {
 conn.reply(m.chat, `*Mapa Eligido Kalahari 🐉*`, m, rcanal, )
