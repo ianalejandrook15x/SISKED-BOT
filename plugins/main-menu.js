@@ -32,16 +32,16 @@ const defaultMenu = {
 “ Hola *%name* soy *Sisked*  ”
 
 ┌───⊷ INFO - BOT
-┊  ✿︎ Cliente: %name
-┊  ✿︎ Exp: %exp
+┊  ✰ Cliente: %name
+┊  ✰ Exp: %exp
 └─────────────
 %readmore
 ┌───⊷ INFO - USER
-┊  ✿︎ Bot: Sisked - MD 
-┊  ✿︎ Modo Público
-┊  ✿︎ Baileys: Multi Device
-┊  ✿︎ Tiempo Activo: %muptime
-┊  ✿︎ Usuarios: %totalreg 
+┊  ✰ Bot: Sisked - MD 
+┊  ✰ Modo Público
+┊  ✰ Baileys: Multi Device
+┊  ✰ Tiempo Activo: %muptime
+┊  ✰ Usuarios: %totalreg 
 └─────────────
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
@@ -49,7 +49,7 @@ const defaultMenu = {
 \t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
     header: '*┏━✰「 %category 」*',
-  body: '*┃⭐›* %cmd',
+  body: '*┃✰›* %cmd',
   footer: '*┗━✰*\n',
   after: `> ${dev}`,
 }
