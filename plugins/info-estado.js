@@ -15,16 +15,16 @@ let muptime = clockString(_muptime)
 const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
 const groupsIn = chats.filter(([id]) => id.endsWith('@g.us')) 
 const used = process.memoryUsage()
-let Ian = `╭─⬣「 *Estado De Sisked* 」⬣\n`
-Ian += `│ 🌟 *Creador ∙* Sisked-Bot\n`
-Ian += `│ 🌟 *Grupos Unidos ∙* ${groupsIn.length}\n`
-Ian += `│ 🌟 *Chats Privados ∙* ${chats.length - groupsIn.length}\n`
-Ian += `│ 🌟 *Total De Chats ∙* ${chats.length}\n`
-Ian += `│ 🌟 *Usuarios Registrados ∙* ${totalreg}\n`
-Ian += `│ 🌟 *Grupos Registrados ∙* ${totalchats}\n`
-Ian += `│ 🌟 *Actividad ∙* ${muptime}\n`
-Ian += `╰─⬣`
-await conn.sendFile(m.chat, pp, 'nino.jpg', ian, fkontak, null, rcanal)
+let Sisked = `╭─⬣「 *Estado De Sisked* 」⬣\n`
+Sisked += `│ 🌟 *Creador ∙* Sisked-Bot\n`
+Sisked += `│ 🌟 *Grupos Unidos ∙* ${groupsIn.length}\n`
+Sisked += `│ 🌟 *Chats Privados ∙* ${chats.length - groupsIn.length}\n`
+Sisked += `│ 🌟 *Total De Chats ∙* ${chats.length}\n`
+Sisked += `│ 🌟 *Usuarios Registrados ∙* ${totalreg}\n`
+Sisked += `│ 🌟 *Grupos Registrados ∙* ${totalchats}\n`
+Sisked += `│ 🌟 *Actividad ∙* ${muptime}\n`
+Sisked += `╰─⬣`
+await conn.sendFile(m.chat, pp, 'nino.jpg', Sisked, fkontak, null, rcanal)
 }
 handler.help = ['status']
 handler.tags = ['info']
