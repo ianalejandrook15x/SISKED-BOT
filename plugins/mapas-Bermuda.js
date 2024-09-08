@@ -22,7 +22,7 @@ const fkontak = {
 await conn.sendFile(m.chat, img, 'hades.jpg', texto, fkontak)
 global.db.data.users[m.sender].lastcofre = new Date * 1
 }
-handler.command = ['bermuda', 'mapab', 'mapabermuda'] 
+handler.command = ['bermuda'] 
 handler.register = true
 handler.admin = true
 export default handler
