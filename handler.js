@@ -178,7 +178,7 @@ export async function handler(chatUpdate) {
         }
 
         //if (m.isBaileys) return 
-        if (m.isBaileys || isBaileysFail && m?.sender === this?.this?.user?.jid) {
+        if (m.isBaileys ||  && m?.sender === this?.this?.user?.jid) {
         return
         }
         m.exp += Math.ceil(Math.random() * 10)
