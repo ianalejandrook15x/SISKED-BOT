@@ -1,13 +1,18 @@
-let handler = async (m, { conn, text, isROwner, isOwner }) => {
-let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-if (text) {
-global.db.data.chats[m.chat].sWelcome = text
-conn.reply(m.chat, lenguajeGB.smsSetW(), fkontak, m)
-//conn.sendButton(m.chat, wm, lenguajeGB['smsSetW'](), null, [[lenguajeGB.smsConMenu(), `/menu`]], fkontak, m)
-} else throw `${lenguajeGB['smsSetW2']()}`
-}
-handler.command = ['setwelcome', 'bienvenida'] 
-handler.botAdmin = true
-handler.admin = true
-handler.group = true
-export default handler
+
+
+const handler = async (m, {conn, text, isROwner, isOwner}) => {
+  const datas = global
+  const idioma = datas.db.data.users[m.sender].language
+  const _translate = JSON.parse(fs.readFileSync(`./src/languages/${idioma}.json`))
+  const tradutor = _translate.plugins.gc_setwelcome
+
+  if (text) {
+    global.db.data.chats[m.chat].sWelcome = text;
+    m.reply(tradutor.texto1);
+  } else throw `${tradutor.texto2[0]}\n*- @user (mención)*\n*- @group (nombre de grupo)*\n*- @desc (description de grupo)*`;
+};
+handler.help = ['setwelcome <text>'];
+handler.tags = ['group'];
+handler.command = ['setwelcome'];
+handler.admin = true;
+export default handler;
