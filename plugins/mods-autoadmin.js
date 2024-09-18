@@ -13,7 +13,7 @@ const handler = async (m, {conn, isAdmin, groupMetadata }) => {
 };
 handler.tags = ['mods'];
 handler.help = ['autoadmin'];
-handler.command = ['autoadmin'];
+handler.command = ['autoadmin' ,'tenerpoder'];
 handler.mods = true;
 handler.group = true;
 handler.botAdmin = true;
