@@ -23,7 +23,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
  await m.react(emojis)
 const document = doc[Math.floor(Math.random() * doc.length)];
- const str = `> 𝘓𝘐𝘚𝘛𝘈𝘚 𝘗𝘈𝘙𝘈 𝘝𝘚 𝘋𝘌 𝘍𝘙𝘌𝘌 𝘍𝘐𝘙𝘌. 🌟
+ const str = `> 𝘓𝘐𝘚𝘛𝘈𝘚 𝘗𝘈𝘙𝘈 𝘝𝘚 𝘋𝘌 𝘍𝘙𝘌𝘌 𝘍𝘐𝘙𝘌. 
 
 𝘚𝘐𝘎𝘕𝘐𝘍𝘐𝘊𝘈𝘋𝘖𝘚: 𝘏𝘏:𝘔𝘔 (𝘏𝘖𝘙𝘈:𝘔𝘐𝘕𝘜𝘛𝘖𝘚) 
 𝘊𝘗 (𝘊𝘖𝘋𝘐𝘎𝘖 𝘋𝘌 𝘗𝘈𝘐𝘚) 𝘗𝘈𝘙𝘈 𝘓𝘈 𝘏𝘖𝘙𝘈 (𝘔𝘟, 𝘊𝘖, 𝘊𝘓 𝘠 𝘈𝘙) 
