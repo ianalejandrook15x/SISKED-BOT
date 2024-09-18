@@ -11,7 +11,7 @@ return conn.reply(m.chat, '⭐ *Utiliza este comando directamente en el número 
 }
 
 let chatId = m.isGroup ? [m.chat, m.sender] : [m.sender]
-let sessionPath = './LuffySession/'
+let sessionPath = './SiskedSession/'
 
 try {
 
