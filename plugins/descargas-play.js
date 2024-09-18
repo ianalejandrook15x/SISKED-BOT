@@ -137,7 +137,7 @@ return conn.reply(m.chat, '☁ *Inténtelo de nuevo*', m, fake)}
 }
 handler.help = ['play', 'play2']
 handler.tags = ['descargas']
-handler.command = ['play', 'play2']
+handler.command = ['play.1', 'play.2']
 handler.register = true
 //handler.estrellas = 1
 
