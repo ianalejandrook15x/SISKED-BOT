@@ -25,17 +25,12 @@ const handler = async (m, { conn, args }) => {
         horaAdelantada = `${horaAdelantadaNumerica.toString().padStart(2, '0')}:${minutoNumerico.toString().padStart(2, '0')}`;
     }
 
-    // Obtener la hora actual
-    const now = new Date();
-    const horaActual = now.toLocaleTimeString('es-MX', { timeZone: 'America/Mexico_City', hour12: false });
-
     const message = `
     24 𝐕𝐄𝐑𝐒𝐔𝐒 24
     
     𝐇𝐎𝐑𝐀𝐑𝐈𝐎
     🇲🇽 𝐌𝐄𝐗 : ${horaUsuario}
     🇨🇴 𝐂𝐎𝐋 : ${horaAdelantada}
-    𝐇𝐎𝐑𝐀 𝐀𝐂𝐓𝐔𝐀𝐋: ${horaActual}
     𝐂𝐎𝐋𝐎𝐑 𝐃𝐄 𝐑𝐎𝐏𝐀: ${colorRopa}
 
     ¬ 𝐉𝐔𝐆𝐀𝐃𝐎𝐑𝐄𝐒 𝐏𝐑𝐄𝐒𝐄𝐍𝐓𝐄𝐒
