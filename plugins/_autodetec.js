@@ -30,13 +30,13 @@ filesDeleted++;
 console.log(`⚠️ Eliminacion YoshiSession (PreKey) que provocan el undefined el chat`)}}}*/
 
 if (chat.detect && m.messageStubType == 21) {
-await this.sendMessage(m.chat, { text: `🍬 ${usuario} *Ha cambiado el nombre del grupo*`, mentions: [m.sender], mentions: (await conn.groupMetadata(m.chat)).participants.map(v => v.id) }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100}) 
+await this.sendMessage(m.chat, { text: `🍬 ${usuario} *_Ha cambiado el nombre del grupo_*`, mentions: [m.sender], mentions: (await conn.groupMetadata(m.chat)).participants.map(v => v.id) }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100}) 
 
 } else if (chat.detect && m.messageStubType == 22) {
-await this.sendMessage(m.chat, { text: `🍒 ${usuario} *Ha cambiado la imágen del grupo*`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100}) 
+await this.sendMessage(m.chat, { text: `🍒 ${usuario} *_Ha cambiado la imágen del grupo_*`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100}) 
 
 } else if (chat.detect && m.messageStubType == 24) {
-await this.sendMessage(m.chat, { text: `🍒 ${usuario} *Ha modificado la descripción!*\n\nNueva descripción:\n\n${m.messageStubParameters[0]}`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+await this.sendMessage(m.chat, { text: `🍒 ${usuario} *_Ha modificado la descripción!*\n\nNueva descripción:_\n\n${m.messageStubParameters[0]}`, mentions: [m.sender] }, { quoted: fliveLoc, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 
 } else if (chat.detect && m.messageStubType == 25) {
 await this.sendMessage(m.chat, { text: `🫐 *Ahora ${m.messageStubParameters[0] == 'on' ? 'solo admins' : 'todos'} pueden editar la información del grupo*`, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
@@ -49,14 +49,14 @@ let txt1 = `⭐ *_Admin promovido_*\n\n`
 txt1 += `_Name:_ @${m.messageStubParameters[0].split`@`[0]}\n`
 txt1 += `_Le otorgó admin:_ @${m.sender.split`@`[0]}`
 
-await conn.sendMessage(m.chat, {text: txt1, mentions: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.packname, "body": `ꪶໍٜ߭۫ި᮫ׅ࣪۬߭ׄ𖾏🍨𝚮͜ᴏ፝ʟ⃨ᴀ⃨⃕🍫`, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": channel, "sourceUrl": channel}}})
+await conn.sendMessage(m.chat, {text: txt1, mentions: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...txt1.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.packname, "body": `𝘚𝘶𝘱𝘦𝘳 𝘉𝘰𝘵 ⭐`, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": channel, "sourceUrl": channel}}})
 
 } else if (chat.detect && m.messageStubType == 30) {
 let txt2 = `😴 *_Un admin menos_*\n\n`
 txt2 += `_Name:_ @${m.messageStubParameters[0].split`@`[0]}\n`
 txt2 += `_Le quitó admin:_ @${m.sender.split`@`[0]}`
 
-await conn.sendMessage(m.chat, {text: txt2, mentions: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.packname, "body": `ꪶໍٜ߭۫ި᮫ׅ࣪۬߭ׄ𖾏🍨𝚮͜ᴏ፝ʟ⃨ᴀ⃨⃕🍫`, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": channel, "sourceUrl": channel}}})
+await conn.sendMessage(m.chat, {text: txt2, mentions: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...txt2.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.packname, "body": `𝘚𝘶𝘱𝘦𝘳 𝘉𝘰𝘵 ⭐`, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": channel, "sourceUrl": channel}}})
 
 } else if (chat.detect && m.messageStubType == 72) {
 await this.sendMessage(m.chat, { text: `🫐 ${usuario} *Cambió la duración de mensajes temporales a @${m.messageStubParameters[0]}*`, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
