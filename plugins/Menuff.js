@@ -23,7 +23,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
  await m.react(emojis)
 const document = doc[Math.floor(Math.random() * doc.length)];
- const str = `> 𝘓𝘐𝘚𝘛𝘈𝘚 𝘗𝘈𝘙𝘈 𝘝𝘚 𝘋𝘌 𝘍𝘙𝘌𝘌 𝘍𝘐𝘙𝘌.
+ const str = `> 𝘓𝘐𝘚𝘛𝘈𝘚 𝘗𝘈𝘙𝘈 𝘝𝘚 𝘋𝘌 𝘍𝘙𝘌𝘌 𝘍𝘐𝘙𝘌. 🌟
 
 𝘚𝘐𝘎𝘕𝘐𝘍𝘐𝘊𝘈𝘋𝘖𝘚: 𝘏𝘏:𝘔𝘔 (𝘏𝘖𝘙𝘈:𝘔𝘐𝘕𝘜𝘛𝘖𝘚) 
 𝘊𝘗 (𝘊𝘖𝘋𝘐𝘎𝘖 𝘋𝘌 𝘗𝘈𝘐𝘚) 𝘗𝘈𝘙𝘈 𝘓𝘈 𝘏𝘖𝘙𝘈 (𝘔𝘟, 𝘊𝘖, 𝘊𝘓 𝘠 𝘈𝘙) 
@@ -31,17 +31,17 @@ const document = doc[Math.floor(Math.random() * doc.length)];
 𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .4𝘷𝘴4 22:30 𝘔𝘟
 𝘌𝘫𝘦𝘮𝘱𝘭𝘰: .8𝘷𝘴8 22:50 𝘕𝘌𝘎𝘙𝘖
 
-.𝘥𝘰𝘯𝘢𝘳𝘴𝘢𝘭𝘢
-.4𝘷𝘴4 𝘏𝘏:𝘔𝘔 𝘊𝘗
-.6𝘷𝘴6 𝘏𝘏:𝘔𝘔 𝘊𝘗
-.8𝘷𝘴8 𝘏𝘏:𝘔𝘔 𝘊𝘙 
-.𝘴𝘤𝘳𝘪𝘮 𝘏𝘏:𝘔𝘔 𝘊𝘗
-.𝘪𝘯𝘵𝘦𝘳𝘯𝘢4 𝘏𝘏:𝘔𝘔 𝘊𝘗
-.12𝘷𝘴12 𝘏𝘏:𝘔𝘔 𝘊𝘙
-.16𝘷𝘴16 𝘏𝘏:𝘔𝘔 𝘊𝘙
-.20𝘷𝘴20 𝘏𝘏:𝘔𝘔 𝘊𝘙
-.24𝘷𝘴24 𝘏𝘏:𝘔𝘔 𝘊𝘙
-.𝘊𝘶𝘢𝘥𝘳𝘪𝘭𝘢𝘵𝘦𝘳𝘰 𝘏𝘏:𝘔𝘔 𝘊𝘙`.trim();     if (m.isGroup) { 
+⭐ .𝘥𝘰𝘯𝘢𝘳𝘴𝘢𝘭𝘢
+⭐ .4𝘷𝘴4 𝘏𝘏:𝘔𝘔 𝘊𝘗
+⭐ .6𝘷𝘴6 𝘏𝘏:𝘔𝘔 𝘊𝘗
+⭐ .8𝘷𝘴8 𝘏𝘏:𝘔𝘔 𝘊𝘙 
+⭐ .𝘴𝘤𝘳𝘪𝘮 𝘏𝘏:𝘔𝘔 𝘊𝘗
+⭐ .𝘪𝘯𝘵𝘦𝘳𝘯𝘢4 𝘏𝘏:𝘔𝘔 𝘊𝘗
+⭐ .12𝘷𝘴12 𝘏𝘏:𝘔𝘔 𝘊𝘙
+⭐ .16𝘷𝘴16 𝘏𝘏:𝘔𝘔 𝘊𝘙
+⭐ .20𝘷𝘴20 𝘏𝘏:𝘔𝘔 𝘊𝘙
+⭐ .24𝘷𝘴24 𝘏𝘏:𝘔𝘔 𝘊𝘙
+⭐ .𝘊𝘶𝘢𝘥𝘳𝘪𝘭𝘢𝘵𝘦𝘳𝘰 𝘏𝘏:𝘔𝘔 𝘊𝘙`.trim();     if (m.isGroup) { 
  // await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
       const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
       conn.sendMessage(m.chat, {image: pp, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net')}, {quoted: m});
