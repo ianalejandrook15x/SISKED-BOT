@@ -23,15 +23,15 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
  await m.react(emojis)
 const document = doc[Math.floor(Math.random() * doc.length)];
- const str = `> 𝘓𝘐𝘚𝘛𝘈𝘚 𝘗𝘈𝘙𝘈 𝘝𝘚 𝘋𝘌 𝘍𝘙𝘌𝘌 𝘍𝘐𝘙𝘌. 
-▸▸ 𝙁𝙍𝙀𝙀 𝙁𝙄𝙍𝙀 𝙂𝙂 ◂◂
+ const str = `> 𝙈𝙀𝙉𝙐 𝘿𝙀 𝙁𝙍𝙀𝙀 𝙁𝙄𝙍𝙀 ⚔. 
  
+★ 𝙁𝙍𝙀𝙀 𝙁𝙄𝙍𝙀 ★
+⭐ ➺ 🎫.donarsala
 ⭐ ➺ 🗼.𝘉𝘦𝘳𝘮𝘶𝘥𝘢
 ⭐ ➺ 🏝️.𝘗𝘶𝘳𝘨𝘢𝘵𝘰𝘳𝘪𝘰
 ⭐ ➺ 🏜️.𝘒𝘢𝘭𝘢𝘩𝘢𝘳𝘪
 ⭐ ➺ 🏗️.𝘕𝘦𝘹𝘵𝘦𝘳𝘳𝘢
 ⭐ ➺ 🏞️.𝘈𝘭𝘱𝘦𝘴
-    .𝘥𝘰𝘯𝘢𝘳𝘴𝘢𝘭𝘢
 
 ▸▸ 𝙇𝙄𝙎𝙏𝘼 𝙑𝙀𝙍𝙎𝙐𝙎 ⚔ ◂◂
 
