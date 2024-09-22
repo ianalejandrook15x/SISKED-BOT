@@ -11,7 +11,7 @@ if (/^que|q$/i.test(m.text)) {
 conn.reply(m.chat, `*so*`, m, rcanal, )
 }
 
-if (/^a|ah$/i.test(m.text)) {
+if (/^.ah/i.test(m.text)) {
 conn.reply(m.chat, `*sua*`, m, rcanal, )
 }
   
