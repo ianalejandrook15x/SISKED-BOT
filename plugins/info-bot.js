@@ -10,6 +10,10 @@ conn.reply(m.chat, `🌟 ¡Hola! Soy Sisked, en que puedo ayudarte hoy?\n\n✰ U
 if (/^que|q$/i.test(m.text)) {
 conn.reply(m.chat, `*so*`, m, rcanal, )
 }
+
+if (/^a|ah$/i.test(m.text)) {
+conn.reply(m.chat, `*sua*`, m, rcanal, )
+}
   
 if (/^.bermuda/i.test(m.text)) {
 conn.reply(m.chat, `*Mapa Eligido Bermuda 🐉*`, m, rcanal, )
